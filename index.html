@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prasant — a story told in weather</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Prasant Kumar Thapa: content creator, video editor and AI-driven storyteller from Meghalaya, living in Al Ain, UAE. Scroll the story: rain, code, aeroplanes and seventeen cats.">
+<meta name="theme-color" content="#E8DDCC">
+<meta property="og:title" content="Prasant — a story told in weather">
+<meta property="og:description" content="Experience cannot be created. It can only be lived.">
+<link rel="preload" href="assets/seq/hello/f_000.webp" as="image">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/chapters.css">
+<link rel="stylesheet" href="css/showcase.css">
+</head>
+<body class="is-loading" data-chapter="hello">
+
+<!-- ========== fixed layers ========== -->
+<div id="grade" aria-hidden="true"></div>
+<canvas id="rain" aria-hidden="true"></canvas>
+<div id="flash" aria-hidden="true"></div>
+<div id="grain" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"><i></i><b></b></div>
+
+<header id="hud">
+  <a class="logo" href="#hello" data-label="home"><span class="mix-static">PKT</span><i>.</i></a>
+  <div class="chapter-label" id="chapterLabel" aria-live="polite">01 · Hello</div>
+  <div class="hud-btns">
+    <button id="storyBtn" class="pill" type="button" title="Let the page scroll itself, with sound effects and no narration"><span class="ico">▶</span><span class="txt">Play my story</span></button>
+    <button id="soundBtn" class="pill" type="button" aria-pressed="false" title="Sound on or off"><span class="ico">♪</span><span class="txt">Sound off</span></button>
+  </div>
+</header>
+<nav id="dots" aria-label="Chapters"></nav>
+
+<div id="loader" role="status">
+  <div class="loader-inner">
+    <div class="loader-hand" id="loaderHand">Namaste…</div>
+    <div class="loader-bar"><i id="loaderBar"></i></div>
+    <div class="loader-pct" id="loaderPct">0%</div>
+    <div class="loader-btns" id="loaderBtns" hidden>
+      <button class="enter" data-sound="1" type="button">Enter with sound <span>♪</span></button>
+      <button class="enter ghost" data-sound="0" type="button">Enter quietly</button>
+    </div>
+    <p class="loader-note">Best on a big screen, with headphones. Scroll to travel.</p>
+  </div>
+</div>
+
+<main id="story">
+
+<!-- ============================================================
+     01 · HELLO  (beige studio, warm, airy)
+     ============================================================ -->
+<section class="ch ch-hello" id="hello" data-name="Hello" data-n="01">
+  <div class="pin hello-pin">
+    <div class="wall" id="helloWall"></div>
+    <div class="hello-type" aria-hidden="true">
+      <div class="mix huge" data-mix="char" data-sizes="0.8,1.25" data-fonts="3" data-colors="a1,a2,a3,ink">NAMASTE</div>
+      <div class="deva">नमस्ते</div>
+    </div>
+    <canvas class="cutout" id="cv-hello"></canvas>
+
+    <div class="cap cap-1"><div class="mix big" data-sizes="0.7,1.7" data-fonts="4">I'm Prasant.</div></div>
+    <div class="cap cap-2"><div class="mix big" data-sizes="0.7,1.6" data-fonts="4">I turn tech into stories.</div></div>
+    <div class="cap cap-3"><div class="mix mid" data-sizes="0.8,1.5" data-fonts="4">Virtual pilot. Full-time cat dad. Maker of things that didn't exist yet.</div></div>
+    <div class="cap cap-4"><div class="mix big" data-sizes="0.8,1.5" data-fonts="4">Scroll. It starts where it rains.</div><div class="arrow-down">↓</div></div>
+
+    <div class="hello-meta">
+      <span>Al Ain, UAE · est. Shillong 1996</span>
+      <span>content · motion · AI</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     02 · MEGHALAYA  (storm, thunder, chaotic overlap)
+     ============================================================ -->
+<section class="ch ch-storm" id="storm" data-name="Meghalaya" data-n="02">
+  <div class="pin storm-pin">
+    <canvas class="plate" id="cv-storm"></canvas>
+    <div class="storm-dim"></div>
+    <div class="storm-title" aria-hidden="true">
+      <div class="mix huge" data-mix="char" data-sizes="0.7,1.35" data-fonts="4" data-colors="a1,a2,a3,ink" id="meghalayaWord">MEGHALAYA</div>
+    </div>
+    <div class="scrawl s1"><div class="mix mid" data-sizes="0.8,1.6" data-fonts="4">Born in Shillong, 1996.</div></div>
+    <div class="scrawl s2"><div class="mix mid" data-sizes="0.8,1.6" data-fonts="4">Megha = cloud. Alaya = abode.</div></div>
+    <div class="scrawl s3"><div class="mix mid" data-sizes="0.8,1.5" data-fonts="4">The wettest corner of Earth is my backyard: Mawsynram, Cherrapunji.</div></div>
+    <div class="scrawl s4"><div class="mix big" data-sizes="0.8,1.5" data-fonts="4">Storm clouds break into clear skies.</div></div>
+  </div>
+
+  <div class="roots" id="roots">
+    <h2 class="roots-h"><span class="mix big" data-sizes="0.8,1.5" data-fonts="4">Things the rain taught me</span></h2>
+    <div class="roots-grid" id="rootsGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     03 · JOURNEY  (sky blue, boarding passes, tickets)
+     ============================================================ -->
+<section class="ch ch-journey" id="journey" data-name="The Journey" data-n="03">
+  <div class="sky-layer" aria-hidden="true"><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i><i class="cloud c4"></i><i class="cloud c5"></i></div>
+
+  <div class="pin anchor-pin">
+    <canvas class="cutout" id="cv-anchor"></canvas>
+    <div class="anchor-words">
+      <div class="mix big a-l" data-sizes="0.8,1.6" data-fonts="4">…and the sky opens.</div>
+      <div class="mix big a-r" data-sizes="0.8,1.6" data-fonts="4">My anchor is my family.</div>
+    </div>
+  </div>
+
+  <div class="pin office-pin">
+    <div class="office-left">
+      <div class="mix big office-h" data-sizes="0.8,1.5" data-fonts="4">Nine-plus years, face to face. India, Thailand, the UAE.</div>
+      <div class="pass-stack" id="passStack"></div>
+    </div>
+    <canvas class="cutout right" id="cv-office"></canvas>
+    <svg class="route" id="routeSvg" viewBox="0 0 1000 220" preserveAspectRatio="none" aria-hidden="true">
+      <path id="routePath" d="M40 170 C 160 40, 250 40, 330 120 S 520 190, 600 90 S 800 20, 960 110" fill="none"/>
+      <g id="routeDots"></g>
+      <g id="plane"><path d="M0 0 l14 5 l-14 5 l3 -5 z" /></g>
+    </svg>
+  </div>
+
+  <div class="stamp-row">
+    <div class="stamp" data-reveal><span class="mix mid" data-sizes="0.9,1.4" data-fonts="4">Service before sales.</span></div>
+    <div class="stamp s2" data-reveal><span class="mix mid" data-sizes="0.9,1.4" data-fonts="4">Never lied or cheated for a sale. Not once.</span></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     04 · THE BUILDER  (blueprint ink, lime & coral, dense)
+     ============================================================ -->
+<section class="ch ch-builder" id="builder" data-name="The Builder" data-n="04">
+  <div class="blueprint" aria-hidden="true"></div>
+
+  <div class="pin desk-pin">
+    <canvas class="cutout left" id="cv-desk"></canvas>
+    <div class="desk-words">
+      <div class="mix huge" data-sizes="0.7,1.4" data-fonts="5" id="buildWord">Build what doesn't exist.</div>
+      <div class="mix mid dw2" data-sizes="0.8,1.5" data-fonts="5">I work relentlessly.</div>
+    </div>
+    <div class="jugaad" id="jugaad">
+      <div class="note n1"><b>2014</b> No throttle for my flight sim? A phone box, syringes, a potentiometer and an Arduino.</div>
+      <div class="note n2"><b>First code</b> Python and C++ by making Snake and a shooter called <i>Sky War</i>. Code was never the goal. Making things was.</div>
+      <div class="note n3"><b>Since 2024</b> I direct AI tools like a production crew. Daily.</div>
+    </div>
+    <div class="tools-cloud" id="toolsCloud"></div>
+  </div>
+
+  <!-- ===== the showcase ===== -->
+  <div class="showcase" id="showcase">
+    <div class="sc-head">
+      <div class="mix huge" data-sizes="0.75,1.3" data-fonts="5" data-mix="word">The Workshop</div>
+      <p class="sc-sub">Twenty-three things I built. Each one grew its own little world. <b>Drag</b> to travel, <b>click</b> a world to step closer.</p>
+    </div>
+    <div class="stage" id="stage">
+      <div class="stage-canvas" id="stageCanvas"></div>
+      <button class="nav-arrow left" id="scPrev" aria-label="Previous world">‹</button>
+      <button class="nav-arrow right" id="scNext" aria-label="Next world">›</button>
+      <div class="world-title" id="worldTitle"><span class="wt-n" id="wtN">01 / 23</span><div class="wt-name" id="wtName">PPTX Studio</div><div class="wt-sub" id="wtSub"></div></div>
+      <aside class="panel" id="panel" aria-hidden="true">
+        <button class="panel-x" id="panelX" aria-label="Close">✕</button>
+        <div class="panel-tabs"><button class="on" data-tab="poster">Poster</button><button data-tab="live">Live UI</button></div>
+        <div class="panel-body">
+          <div class="tab tab-poster on" id="tabPoster"></div>
+          <div class="tab tab-live" id="tabLive"><div class="live-frame" id="liveFrame"></div><p class="live-note">A real, tiny live view. Interact with it, or step inside.</p></div>
+          <div class="panel-info" id="panelInfo"></div>
+        </div>
+        <div class="panel-cta"><button class="explore" id="exploreBtn" type="button">Explore now <span>→</span></button><a class="ghost" id="newTabBtn" target="_blank" rel="noopener">Open in new tab ↗</a></div>
+      </aside>
+      <div class="dock" id="dock" aria-label="Workspace dock"></div>
+    </div>
+  </div>
+
+  <!-- ===== workspace ledger ===== -->
+  <div class="workspace" id="workspace">
+    <div class="ws-head">
+      <div class="mix huge" data-sizes="0.75,1.3" data-fonts="5">My Workspace</div>
+      <p class="ws-sub">Every build: its logo, when I started, when I last shipped it, and what it does in one line.</p>
+      <div class="ws-stats" id="wsStats"></div>
+      <div class="ws-filters" id="wsFilters"></div>
+    </div>
+    <div class="ws-axis" id="wsAxis"></div>
+    <div class="ws-rows" id="wsRows"></div>
+  </div>
+
+  <!-- ===== the two companies ===== -->
+  <div class="companies" id="companies">
+    <div class="co-head"><div class="mix huge" data-sizes="0.75,1.3" data-fonts="5">Two companies. One roof.</div></div>
+    <div class="co-grid">
+      <article class="co co-ud" id="coUD" data-reveal>
+        <div class="co-badge">U<br>DESIGN</div>
+        <h3 class="co-name">U Design. <em>We Print.</em></h3>
+        <p class="co-line"></p>
+        <p class="co-story"></p>
+        <ul class="co-items" id="udItems"></ul>
+        <div class="co-sister"><b>Sister brand — COCO Pet Care</b><span></span><i></i></div>
+        <a class="co-link" target="_blank" rel="noopener">Visit U-Design ↗</a>
+      </article>
+      <article class="co co-ak" id="coAK" data-reveal>
+        <div class="co-badge deva">आकृति</div>
+        <h3 class="co-name">Aakriti <em>— form</em></h3>
+        <p class="co-line"></p>
+        <p class="co-story"></p>
+        <div class="ak-swatches"><i style="--c:#1C1B22">Ink</i><i style="--c:#F4EEE2;color:#1C1B22">Sand</i><i style="--c:#E0913A">Saffron</i><i style="--c:#C0562F">Terracotta</i></div>
+        <div class="co-sister"><b>QR Connect</b><span></span></div>
+        <a class="co-link" target="_blank" rel="noopener">Visit Aakriti ↗</a>
+      </article>
+    </div>
+  </div>
+
+  <!-- ===== behind the lens ===== -->
+  <div class="lens" id="lens">
+    <div class="lens-head">
+      <div class="mix huge" data-sizes="0.75,1.3" data-fonts="5">I shoot it. I edit it. I direct the AI.</div>
+      <p>Shooting videos, taking photos, working. A few frames from the portfolio.</p>
+    </div>
+    <div class="photo-strip" id="photoStrip"></div>
+    <div class="reels" id="reels"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     05 · PLAYER TWO  (neon, diagonal, loud)
+     ============================================================ -->
+<section class="ch ch-gaming" id="gaming" data-name="Player Two" data-n="05">
+  <div class="halftone" aria-hidden="true"></div>
+  <div class="pin cockpit-pin">
+    <div class="cockpit-frame"><canvas class="plate" id="cv-cockpit"></canvas><div class="scan"></div>
+      <div class="hud-g hud-alt"><small>ALT</small><b id="hudAlt">0</b></div>
+      <div class="hud-g hud-spd"><small>KTS</small><b id="hudSpd">0</b></div>
+      <div class="hud-g hud-hdg"><small>HDG</small><b id="hudHdg">000</b></div>
+    </div>
+    <div class="gm-words">
+      <div class="mix huge" data-sizes="0.7,1.5" data-fonts="5" id="yearsWord">13 years flying.</div>
+      <div class="mix big gw2" data-sizes="0.8,1.5" data-fonts="5">Still going strong.</div>
+      <div class="gw3 mix mid" data-sizes="0.8,1.4" data-fonts="5">I built my own throttle when I couldn't buy one.</div>
+    </div>
+  </div>
+
+  <div class="sim-line" id="simLine">
+    <div class="mix big" data-sizes="0.8,1.5" data-fonts="5">One simulator at a time</div>
+    <div class="sim-track" id="simTrack"></div>
+  </div>
+
+  <div class="ent" id="ent">
+    <div class="ent-head"><div class="mix huge" data-sizes="0.7,1.4" data-fonts="5">The Entertainer</div><p>Now showing, every night after work.</p></div>
+    <div class="panels" id="panelsGrid"></div>
+    <div class="channels" id="channels"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     06 · MY PEOPLE  (warm night, scrapbook, soft)
+     ============================================================ -->
+<section class="ch ch-people" id="people" data-name="My People" data-n="06">
+  <div class="eyes" id="eyes" aria-hidden="true"></div>
+  <div class="lamp" aria-hidden="true"></div>
+
+  <div class="ppl-head">
+    <div class="mix huge" data-sizes="0.75,1.4" data-fonts="4">My anchor is my family.</div>
+  </div>
+  <div class="ppl-grid" id="pplGrid"></div>
+
+  <div class="cat-intro">
+    <div class="cat-count"><b id="catNum">0</b><span>cats</span></div>
+    <div class="cat-says"><div class="mix big" data-sizes="0.8,1.5" data-fonts="4">Every one arrived by accident. Not one was a mistake.</div></div>
+  </div>
+  <div class="cat-rail" id="catRail"></div>
+  <p class="rail-hint">Drag sideways. Tap a card to see her again.</p>
+
+  <div class="stay">
+    <div class="mix big" data-sizes="0.8,1.5" data-fonts="4">Why I stay.</div>
+    <div class="stay-chips" id="stayChips"></div>
+  </div>
+
+  <div class="thanks">
+    <div class="mix huge" data-sizes="0.8,1.5" data-fonts="4">Thank you.</div>
+    <p>To everyone who taught me something, by name.</p>
+    <div class="name-wall" id="nameWall"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     07 · FINALE
+     ============================================================ -->
+<section class="ch ch-finale" id="finale" data-name="Contact" data-n="07">
+  <div class="pin finale-pin">
+    <div class="wall warm" id="finaleWall"></div>
+    <canvas class="cutout" id="cv-home"></canvas>
+    <div class="finale-words">
+      <div class="mix huge" data-sizes="0.7,1.5" data-fonts="4" id="motto">Experience cannot be created. It can only be lived.</div>
+    </div>
+  </div>
+  <div class="contact" id="contact">
+    <div class="mix big" data-sizes="0.8,1.5" data-fonts="4">Let's make something that doesn't exist yet.</div>
+    <p class="avail">Open to remote work or roles in Al Ain. Content creation, video editing, AI-driven marketing, customer service and front-office.</p>
+    <div class="contact-btns">
+      <a class="big-btn wa" id="waBtn" target="_blank" rel="noopener">WhatsApp me <span>→</span></a>
+      <a class="big-btn mail" id="mailBtn">Email <span>@</span></a>
+      <a class="big-btn tel" id="telBtn">Call <span>☎</span></a>
+    </div>
+    <div class="links-row">
+      <a href="https://udesign999-bot.github.io/" target="_blank" rel="noopener">U-Design</a>
+      <a href="https://aakritimarketing.github.io/" target="_blank" rel="noopener">Aakriti</a>
+      <a href="https://tzprasantofficial-ai.github.io/-Prasant-/" target="_blank" rel="noopener">First portfolio</a>
+      <a href="https://tzprasantofficial-ai.github.io/Tzprasantofficial-ai/" target="_blank" rel="noopener">Site index</a>
+    </div>
+    <footer>© 2026 Prasant Kumar Thapa · Al Ain, UAE · built with Claude · <i>Experience cannot be created. It can only be lived.</i></footer>
+  </div>
+</section>
+
+</main>
+
+<!-- portal: step inside a site -->
+<div id="portal" aria-hidden="true">
+  <div class="portal-bar"><button id="portalBack" type="button">← Back to the story</button><span id="portalName"></span><a id="portalOpen" target="_blank" rel="noopener">Open in new tab ↗</a></div>
+  <div class="portal-frame" id="portalFrame"></div>
+</div>
+
+<noscript><div style="position:fixed;inset:0;display:grid;place-items:center;background:#111;color:#fff;font:20px sans-serif;text-align:center;padding:24px;z-index:9999">This story needs JavaScript. Prasant · Al Ain, UAE · Tz.Prasant.Official@gmail.com</div></noscript>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/seqmeta.js"></script>
+<script src="js/type.js"></script>
+<script src="js/seq.js"></script>
+<script src="js/shots-data.js"></script>
+<script src="js/shots.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/showcase3d.js"></script>
+<script src="js/showcase-ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

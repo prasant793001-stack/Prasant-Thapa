@@ -1,0 +1,234 @@
+<title>Prasant Shot List</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* layout: one calm column, a progress strip on top, a card per shot — like a film call sheet.
+   chroma-key green is the only accent, because that is the colour the whole job turns on */
+:root{
+  --bg:#F3F6F3; --panel:#FFFFFF; --fg:#16201A; --muted:#566559; --line:#D3DCD5; --code:#EDF2EE;
+  --accent:#00B140; --on-accent:#04210F; --accent-ink:#00702A; --done:#E4F4E9;
+  --f-head:'Space Grotesk',system-ui,sans-serif; --f-body:'Inter',system-ui,sans-serif; --f-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0D1410; --panel:#141D18; --fg:#E7EEE9; --muted:#92A398; --line:#25322A; --code:#0F1712;
+  --accent:#1ED264; --on-accent:#04210F; --accent-ink:#52E58C; --done:#12301E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D1410; --panel:#141D18; --fg:#E7EEE9; --muted:#92A398; --line:#25322A; --code:#0F1712;
+  --accent:#1ED264; --on-accent:#04210F; --accent-ink:#52E58C; --done:#12301E; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--f-body);padding-block:28px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--f-head);line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(28px,5vw,40px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(21px,3.4vw,26px);font-weight:700}
+h3{font-size:17px;font-weight:500}
+p{margin:0}
+.lede{color:var(--muted);max-width:62ch}
+.bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.meter{flex:1 1 220px;height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+.count{font-family:var(--f-mono);font-size:14px;white-space:nowrap}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.steps li{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
+.steps b{display:block;font-family:var(--f-head);font-weight:700;margin-bottom:4px}
+.steps span{color:var(--muted);font-size:14.5px}
+.block{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.block h3 small{font:400 14px var(--f-body);color:var(--muted);margin-left:6px}
+pre{margin:0;background:var(--code);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font:13.5px/1.55 var(--f-mono);white-space:pre-wrap;overflow-wrap:anywhere;min-width:0}
+ul.tips{margin:0;padding-left:20px;color:var(--fg);display:flex;flex-direction:column;gap:6px}
+ul.tips li::marker{color:var(--accent-ink)}
+button{font:inherit;cursor:pointer}
+.copy{align-self:flex-start;background:var(--accent);color:var(--on-accent);border:0;border-radius:9px;padding:8px 14px;font-weight:600;font-size:14px}
+.copy:hover{filter:brightness(1.06)}
+.copy:focus-visible,.chk input:focus-visible,summary:focus-visible{outline:3px solid var(--accent-ink);outline-offset:2px}
+.copy.ok{background:var(--fg);color:var(--bg)}
+.scene{display:flex;flex-direction:column;gap:12px}
+.scene header{display:flex;flex-direction:column;gap:4px}
+.spec{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.spec span{font:500 12.5px var(--f-mono);border:1px solid var(--line);border-radius:99px;padding:3px 10px;color:var(--muted)}
+.shot{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:8px 16px}
+.shot.done{background:var(--done)}
+.shot .id{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.shot code{font:500 14px var(--f-mono);color:var(--accent-ink);overflow-wrap:anywhere}
+.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--muted);cursor:pointer}
+.chk input{width:18px;height:18px;accent-color:var(--accent)}
+.shot .what{display:flex;flex-direction:column;gap:8px;min-width:0}
+.shot .what b{font-weight:600}
+details summary{cursor:pointer;color:var(--muted);font-size:14px}
+details pre{margin-top:8px}
+.note{border-left:4px solid var(--accent);padding:4px 0 4px 14px;color:var(--muted);max-width:66ch}
+@media(max-width:600px){.shot{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.meter i{transition:none}}
+</style>
+
+<main class="wrap">
+  <header style="display:flex;flex-direction:column;gap:12px">
+    <h1>Shot list for the new site</h1>
+    <p class="lede">Each image below becomes a pose or a backdrop in a scroll scene. Generate them in Gemini with your own photos as reference, save each one under the file name shown, and send them back. Everything else is handled for you.</p>
+    <div class="bar"><div class="meter" role="progressbar" aria-label="Shots finished" aria-valuemin="0" aria-valuemax="100" id="meter"><i id="meterFill"></i></div><div class="count" id="count">0 of 0</div></div>
+  </header>
+
+  <ol class="steps">
+    <li><b>1. Start one chat</b><span>Attach 4 to 6 clear photos of you, then paste the opening message below.</span></li>
+    <li><b>2. One prompt, one image</b><span>Copy a shot prompt, paste it, download the full-size PNG, rename it, tick the box.</span></li>
+    <li><b>3. Send them to me</b><span>Attach the files in our chat, or drop them in an <code style="font-family:var(--f-mono)">inbox</code> folder. I cut them out and wire them in.</span></li>
+  </ol>
+
+  <section class="block" aria-labelledby="open-h">
+    <h3 id="open-h">Opening message <small>paste once, with your photos attached</small></h3>
+    <pre id="openText"></pre>
+    <button class="copy" type="button" data-copy="open">Copy opening message</button>
+    <h3>Which photos to attach</h3>
+    <ul class="tips">
+      <li>Face straight to camera, relaxed, no filter.</li>
+      <li>A big natural smile, and one serious or thoughtful look.</li>
+      <li>Three-quarter turn to the left, and one to the right.</li>
+      <li>One waist-up shot in the outfit you want the site to show.</li>
+      <li>Good daylight, no sunglasses, no heavy beauty-mode edits.</li>
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="set-h">
+    <h3 id="set-h">Settings that matter</h3>
+    <ul class="tips">
+      <li>Use Gemini's image creation with the highest-quality image model your Pro plan offers, and ask for 4K every time (the prompts already do).</li>
+      <li>Keep every pose of one scene in the same chat, so the face and the camera distance stay the same.</li>
+      <li>Download the original full-size PNG, not a screenshot and not a shared preview.</li>
+      <li>If the face drifts, re-attach your photos and add: <em>match my reference photos exactly</em>.</li>
+      <li>If the green background shows a floor, shadow or gradient, add: <em>the green must be one flat colour edge to edge, no floor, no shadow</em>.</li>
+      <li>If skin or hair looks green-tinted, add: <em>remove all green spill from skin, hair and clothes</em>.</li>
+    </ul>
+  </section>
+
+  <div id="scenes" style="display:flex;flex-direction:column;gap:34px"></div>
+
+  <p class="note">Not sure about a shot? Skip it. Every scene works with any number of poses from one up, and the scenes you do not send keep their current video frames.</p>
+</main>
+
+<script>
+(function(){
+  var OPEN = "I'm going to ask for a series of photoreal images of me for my personal website. The attached photos are my identity reference. In every image keep my face exactly as in the photos: same face shape, eyes, nose, jawline, beard and stubble pattern, skin tone and swept-up dark hair. Do not beautify, slim or age me, and do not change my proportions. Natural skin texture, true-to-life colour. Always produce the highest resolution you can (4K). Wait for my next message, then make one image per message.";
+  var CUT = "Background: one perfectly flat, solid chroma-key green (#00B140) from edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflections, nothing behind him. Soft, even frontal studio light, neutral white balance, and no green light spilling onto his skin, hair or clothes. Sharp individual hair strands, photorealistic skin texture.";
+  var FRAME = "Eye-level, 50mm look, waist-up, centred, head about 15% below the top edge, body filling about 85% of the frame height. Both hands and elbows fully inside the frame. Keep exactly this camera distance in every image of this scene.";
+  var BLAZER = "a dark charcoal blazer over a plain white crew-neck T-shirt";
+  var BLAZER_G = "a dark charcoal blazer over a plain grey crew-neck T-shirt";
+  var TEE = "a plain white crew-neck T-shirt with no logo and no jacket";
+
+  var SCENES = [
+    { id:"hello", name:"Hello", where:"Opening studio. The captions read: I'm Prasant, I turn tech into stories, Virtual pilot / Full-time cat dad, Scroll.", ar:"1:1", wear:BLAZER, kind:"cut", shots:[
+      ["Namaste","Palms pressed together at chest height, a warm gentle smile, a slight bow of the head, eyes looking into the camera."],
+      ["Hello wave","A big natural smile, one hand raised in a relaxed wave, the other arm loose at his side."],
+      ["Telling a story","Both hands open in front of his chest as if explaining something, mid-sentence, eyebrows slightly raised, friendly eyes."],
+      ["Virtual pilot","One hand held flat and tilted like an aeroplane in flight, a playful half-smile, looking at the camera."],
+      ["Come with me","Index finger pointing toward the camera, a confident smile, leaning very slightly forward."]
+    ]},
+    { id:"storm", name:"Meghalaya storm", where:"Full-screen backdrops for the rain and thunder chapter. No person in these.", ar:"16:9", kind:"plate", shots:[
+      ["Clouds roll in","Huge dark storm clouds pouring over the green hills of Meghalaya, North-East India: low rolling cloud banks, steel-blue and slate-grey sky, a curtain of heavy rain over distant ridges, wet green slopes, a moody cinematic wide shot."],
+      ["Lightning","The same Meghalaya hill scene at the peak of the storm: a forked bolt of lightning splitting the clouds over the hills, rain streaking sideways, the valley lit blue-white for an instant."],
+      ["The storm eases","The storm easing over the wet green Khasi hills: clouds breaking open with a single shaft of golden light, mist rising from the valley, quiet and dramatic."]
+    ]},
+    { id:"anchor", name:"The sky opens", where:"Start of The Journey, on a bright blue sky. Captions: ...and the sky opens, my anchor.", ar:"1:1", wear:BLAZER_G, kind:"cut", shots:[
+      ["Looking up","Gazing up and slightly to the side with a soft wondering smile, chin lifted, both arms relaxed."],
+      ["Arms wide","Both arms spread wide open like opening up to the sky, a joyful open-mouthed smile."],
+      ["Hand on heart","One hand resting on his chest, a grateful warm smile, looking at the camera."],
+      ["Straight to camera","Hands loosely clasped in front, a calm friendly expression, talking to the camera."]
+    ]},
+    { id:"office", name:"Nine-plus years", where:"The boarding-pass stops: Mumbai, Bangkok, Dubai, Al Ain.", ar:"1:1", wear:BLAZER_G, kind:"cut", shots:[
+      ["Boarding pass","Holding a plain blank boarding-pass-sized card in one hand, glancing at the camera with a smile. No logos or text on the card."],
+      ["Tablet","A tablet held against his forearm like a work device, standing confident, a slight smile. Blank screen facing away."],
+      ["Headset call","Wearing a wired call-centre headset, mid-conversation, friendly and animated, one hand gesturing."],
+      ["Thumbs up","A proud smile and a clear thumbs up toward the camera."]
+    ]},
+    { id:"desk", name:"The builder", where:"Dark blueprint desk scene with the sticky notes and tool bubbles. He is seated, so keep it waist-up with no chair visible.", ar:"4:3", wear:TEE, kind:"cut", shots:[
+      ["Typing","Seated and leaning slightly forward, hands low in front of him as if typing on a laptop below the frame, eyes focused on a screen just below the camera."],
+      ["Thinking","Chin resting on his fist, brows slightly furrowed, looking off to one side at a screen, deep in thought."],
+      ["Aha","One index finger raised, eyes wide, an excited sudden-idea smile."],
+      ["Circuit board","Holding a small blue microcontroller board between two fingers at chest height, inspecting it with curiosity. No brand text on the board."],
+      ["Shipped it","Leaning back with both hands behind his head, a satisfied grin, relaxed shoulders."]
+    ]},
+    { id:"home", name:"Contact", where:"Warm brown finale. Captions: Experience cannot be created, it can only be lived. Let's make something that doesn't exist yet.", ar:"1:1", wear:TEE, kind:"cut", shots:[
+      ["Namaste, softer","Palms together at chest height, a soft warm smile, eyes kind, a very slight head tilt."],
+      ["Thank you","One hand on his heart, a sincere gentle smile, looking at the camera."],
+      ["Welcome","Both arms opening slightly outward at waist height in a welcoming gesture, a big warm smile."],
+      ["See you","A relaxed head tilt, a friendly smile, one hand raised in a small goodbye wave."]
+    ]}
+  ];
+
+  function cutPrompt(sc, s){
+    return s[1] + " He is wearing " + sc.wear + ".\n" + FRAME + " Aspect ratio " + sc.ar + ".\n" + CUT + "\nSame man as in my reference photos, face unchanged. 4K, maximum resolution.";
+  }
+  function platePrompt(sc, s){
+    return s[1] + " No people, no text, no logos, no watermarks. Cinematic, natural colour, deep detail, sharp. Aspect ratio " + sc.ar + ", 4K, maximum resolution.";
+  }
+
+  var store = {}; try{ store = JSON.parse(localStorage.getItem('shotlist-done')||'{}'); }catch(e){}
+  function save(){ try{ localStorage.setItem('shotlist-done', JSON.stringify(store)); }catch(e){} }
+
+  function copy(text, btn){
+    var label = btn.textContent;
+    function ok(){ btn.classList.add('ok'); btn.textContent = 'Copied'; setTimeout(function(){ btn.classList.remove('ok'); btn.textContent = label; }, 1400); }
+    function fallback(){
+      var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly',''); ta.style.cssText = 'position:fixed;opacity:0;left:0;top:0';
+      document.body.appendChild(ta); ta.select();
+      try{ if(document.execCommand('copy')) ok(); else btn.textContent = 'Select the text and copy'; }catch(e){ btn.textContent = 'Select the text and copy'; }
+      document.body.removeChild(ta);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(ok, fallback); } else fallback();
+  }
+
+  document.getElementById('openText').textContent = OPEN;
+  document.querySelector('[data-copy="open"]').addEventListener('click', function(e){ copy(OPEN, e.currentTarget); });
+
+  var root = document.getElementById('scenes'), total = 0, boxes = [];
+  SCENES.forEach(function(sc){
+    var sec = document.createElement('section'); sec.className = 'scene';
+    var h = document.createElement('header');
+    h.innerHTML = '<h2></h2><p class="lede"></p><div class="spec"></div>';
+    h.querySelector('h2').textContent = sc.name;
+    h.querySelector('.lede').textContent = sc.where;
+    var spec = h.querySelector('.spec');
+    [sc.kind==='cut' ? 'cut-out poses' : 'full-frame backdrops', 'aspect ' + sc.ar, sc.kind==='cut' ? 'green background' : 'no people', sc.shots.length + ' shots'].forEach(function(t){ var s = document.createElement('span'); s.textContent = t; spec.appendChild(s); });
+    sec.appendChild(h);
+    var all = [];
+    sc.shots.forEach(function(s, i){
+      total++;
+      var file = sc.id + '_' + String(i+1).padStart(2,'0') + '.png';
+      var prompt = sc.kind==='cut' ? cutPrompt(sc, s) : platePrompt(sc, s);
+      all.push('[' + file + ']\n' + prompt);
+      var card = document.createElement('article'); card.className = 'shot';
+      var idc = document.createElement('div'); idc.className = 'id';
+      var code = document.createElement('code'); code.textContent = file;
+      var lab = document.createElement('label'); lab.className = 'chk';
+      var cb = document.createElement('input'); cb.type = 'checkbox'; cb.id = 'c-' + file; cb.checked = !!store[file];
+      lab.appendChild(cb); lab.appendChild(document.createTextNode('Done'));
+      idc.appendChild(code); idc.appendChild(lab);
+      var what = document.createElement('div'); what.className = 'what';
+      var t = document.createElement('b'); t.textContent = s[0];
+      var d = document.createElement('p'); d.textContent = s[1]; d.style.color = 'var(--muted)'; d.style.fontSize = '14.5px';
+      var btn = document.createElement('button'); btn.className = 'copy'; btn.type = 'button'; btn.textContent = 'Copy prompt';
+      var det = document.createElement('details'); var sm = document.createElement('summary'); sm.textContent = 'Show the full prompt';
+      var pre = document.createElement('pre'); pre.textContent = prompt; det.appendChild(sm); det.appendChild(pre);
+      btn.addEventListener('click', function(){ copy(prompt, btn); });
+      what.appendChild(t); what.appendChild(d); what.appendChild(btn); what.appendChild(det);
+      card.appendChild(idc); card.appendChild(what);
+      card.classList.toggle('done', cb.checked);
+      cb.addEventListener('change', function(){ store[file] = cb.checked; if(!cb.checked) delete store[file]; card.classList.toggle('done', cb.checked); save(); refresh(); });
+      boxes.push(cb); sec.appendChild(card);
+    });
+    var allBtn = document.createElement('button'); allBtn.className = 'copy'; allBtn.type = 'button'; allBtn.textContent = 'Copy all ' + sc.shots.length + ' prompts for this scene';
+    allBtn.addEventListener('click', function(){ copy(all.join('\n\n---\n\n'), allBtn); });
+    sec.appendChild(allBtn);
+    root.appendChild(sec);
+  });
+
+  function refresh(){
+    var n = boxes.filter(function(b){ return b.checked; }).length;
+    document.getElementById('count').textContent = n + ' of ' + total + ' shots';
+    document.getElementById('meterFill').style.width = (total ? n / total * 100 : 0) + '%';
+    document.getElementById('meter').setAttribute('aria-valuenow', total ? Math.round(n / total * 100) : 0);
+  }
+  refresh();
+})();
+</script>
