@@ -1,0 +1,9 @@
+# keep the repo clean
+Thumbs.db
+desktop.ini
+.DS_Store
+*.log
+*.zip
+node_modules/
+inbox/*
+!inbox/README.txt
