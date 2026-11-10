@@ -105,16 +105,22 @@ body.in-stage #hud{--hud-ink:var(--st-hud,#fff)}
 [data-reveal]{will-change:transform,opacity}
 .sr{position:absolute;left:-9999px}
 
-/* ---------- shots: stills played like motion graphics ---------- */
+/* ---------- shots: stills played like 3D motion graphics ---------- */
 .shots{pointer-events:none}
-.shots.cutout{aspect-ratio:var(--ar,1);width:auto}
-.shots .stack{position:absolute;inset:0}
+.shots.cutout{aspect-ratio:var(--ar,1);width:auto;-webkit-mask-image:none;mask-image:none}   /* no box-shaped mask: poses fly past the box edges without a hard cut */
+.shots .stack{position:absolute;inset:0;perspective:1500px;perspective-origin:50% 58%}
 .shots .pose{position:absolute;inset:0;transform-origin:50% 100%;will-change:transform,opacity,clip-path;backface-visibility:hidden}
+.shots-cutout .pose{-webkit-mask-image:linear-gradient(#000 80%,transparent 99%);mask-image:linear-gradient(#000 80%,transparent 99%)}   /* the soft fade at the bottom now travels with each pose */
 .shots .pose img{display:block;width:100%;height:100%;object-fit:contain;object-position:50% 100%;user-select:none;-webkit-user-drag:none}
 .shots-plate{overflow:hidden}
 .shots-plate .pose{transform-origin:50% 50%}
 .shots-plate .pose img{object-fit:cover;object-position:50% 50%}
 .shots .burst{position:absolute;left:50%;top:46%;width:78%;aspect-ratio:1;opacity:0;pointer-events:none;z-index:0;transform:translate(-50%,-50%)}
+.shots .deco{position:absolute;z-index:0;width:var(--s,26px);height:var(--s,26px);opacity:0;pointer-events:none;will-change:transform,opacity}
+.shots .deco[data-k=ring]{border:4px solid var(--c,#fff);border-radius:50%}
+.shots .deco[data-k=dot]{background:var(--c,#fff);border-radius:50%}
+.shots .deco[data-k=plus]{background:linear-gradient(var(--c,#fff),var(--c,#fff)) center/100% 24% no-repeat,linear-gradient(var(--c,#fff),var(--c,#fff)) center/24% 100% no-repeat}
+.shots .deco[data-k=tri]{background:var(--c,#fff);clip-path:polygon(50% 6%,96% 92%,4% 92%)}
 
 /* phones: nothing may poke out sideways, or the browser zooms the whole page out to fit it.
    overflow-x:clip hides the overflow without making a scroll container (pins and touch scroll stay native) */
@@ -128,3 +134,4 @@ html.lite #grain,html.lite #grade,html.lite .scan,html.lite #cursor{display:none
 html.lite #flash{mix-blend-mode:normal}
 html.lite .lamp{mix-blend-mode:normal;animation:none;opacity:.55}
 html.lite *{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+html.lite .cutout{filter:none}   /* a drop-shadow on a layer that is animating in 3D is re-drawn every frame: too heavy for phones */

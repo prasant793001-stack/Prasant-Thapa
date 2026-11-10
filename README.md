@@ -22,6 +22,10 @@ Options: `--scene hello` (one scene), `--grid 3x2` (a sheet with another layout)
 
 **What is in this version (your own renders).** 28 poses plus 3 storm backdrops, cut out, upscaled and wired in: hello 8, anchor 4, office 4, desk 8, home 4, storm 3. Only the numbered files were used; the `*_sheet*` files repeat the same poses smaller, so they were left out. Poses of one scene may have different sizes: the tool matches them to the largest one (the 1024 px renders were AI-upscaled to 2048 px *before* the green was removed, which keeps hair edges clean). In `hello` the order was changed to 01-05, then 08, 06, 07, so the opening ends on the turn-and-wave that leads into the storm: to get the same order from the original files, rename 08 to 06, 06 to 07 and 07 to 08 before running the tool.
 
+## How the poses move (v2.2)
+One pose of you is on stage at a time, never two. Scrolling decides which pose is current; the change is a timed animation (about 1 second) that does not depend on scroll speed: the old pose leaves, a colour shape sweeps through, the new pose arrives, and small shapes pop in around it. The changes are real 3D: turntable flip, fly-through, tilting slide, card drop, stamp, iris and blinds. A resting pose floats and breathes in 3D, leans with the scroll speed and follows the mouse a little. Scroll jumps (menu dots, Story mode) skip straight to the pose you land on.
+To change which move is used between which poses, edit `ORDER` in `js/shots.js` (one name per change: `flip tilt fly stamp drop iris blinds pop`). `OUT` and `IN` at the top of the same file set how long a pose takes to leave and to arrive. Reduced-motion settings get a plain fade.
+
 | File name | Scene | Kind |
 |---|---|---|
 | `hello_sheet` / `hello_NN` | Opening studio | cut-out poses |
