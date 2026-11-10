@@ -79,13 +79,23 @@
     };
     handlers.onFocus(0); return api;
   }
-  function boot() {
-    if (engine) return;
-    try { if (window.Showcase3D && Showcase3D.supported) engine = Showcase3D.create(handlers); } catch (e) { console.warn('3D stage unavailable', e); engine = null; }
-    if (!engine) { stage.classList.add('no-3d'); engine = fallbackEngine(handlers.container); }
-    stage._seen = true; PKT.showcase.engine = engine;
-    if (queued != null) { const q = queued; queued = null; setTimeout(function () { engine.select(q); }, 500); }
+  /* the 3D bundle (about 580 KB) is only fetched when the stage is a few screens away, so the first screen never waits for it */
+  let p3d = null;
+  function load3d() {
+    if (window.Showcase3D) return Promise.resolve();
+    return p3d || (p3d = new Promise(function (res) { const s = document.createElement('script'); s.src = 'js/showcase3d.js'; s.onload = s.onerror = function () { res(); }; document.head.appendChild(s); }));
   }
+  let booting = false;
+  function boot() {
+    if (engine || booting) return; booting = true;
+    load3d().then(function () {
+      try { if (window.Showcase3D && Showcase3D.supported) engine = Showcase3D.create(handlers); } catch (e) { console.warn('3D stage unavailable', e); engine = null; }
+      if (!engine) { stage.classList.add('no-3d'); engine = fallbackEngine(handlers.container); }
+      stage._seen = true; PKT.showcase.engine = engine;
+      if (queued != null) { const q = queued; queued = null; setTimeout(function () { engine.select(q); }, 500); }
+    });
+  }
+  new IntersectionObserver(function (es, ob) { if (es[0].isIntersecting) { load3d(); ob.disconnect(); } }, { rootMargin: '350% 0px 350% 0px' }).observe(stage);
   new IntersectionObserver(function (es, ob) { if (es[0].isIntersecting) { boot(); ob.disconnect(); } }, { rootMargin: '120% 0px 120% 0px' }).observe(stage);
 
   function choose(i) { if (!engine) { queued = i; boot(); return; } if (cur === i && engine.selected === i) return; engine.select(i); }

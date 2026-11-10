@@ -9,10 +9,11 @@
   const ctx = cv.getContext('2d');
   let W = 0, H = 0, dpr = 1, drops = [], splashes = [], bolts = [];
   let intensity = 0, running = false, lastT = 0, nextStrike = 0;
+  const LITE = document.documentElement.classList.contains('lite');
   const small = innerWidth < 760;
-  const MAXDROPS = small ? 260 : 620;
+  const MAXDROPS = LITE ? 130 : small ? 260 : 620;
 
-  function resize() { dpr = Math.min(devicePixelRatio || 1, 1.5); W = cv.width = Math.floor(innerWidth * dpr); H = cv.height = Math.floor(innerHeight * dpr); }
+  function resize() { dpr = Math.min(devicePixelRatio || 1, LITE ? 1 : 1.5); W = cv.width = Math.floor(innerWidth * dpr); H = cv.height = Math.floor(innerHeight * dpr); }
   addEventListener('resize', resize); resize();
 
   function mkDrop(initial) {

@@ -4,21 +4,23 @@
    ============================================================ */
 (function () {
   PKT.seqs = {};
-  const DPR_CAP = 1;
+  const LITE = document.documentElement.classList.contains('lite');
 
   class Seq {
     constructor(key, canvas) {
       this.key = key; this.cv = canvas; this.ctx = canvas.getContext('2d');
       const m = PKT.seqMeta[key]; this.m = m; this.n = m.count;
       this.dir = PKT.seq[key].dir; this.ext = m.ext;
-      canvas.width = m.w; canvas.height = m.h;
+      this.step = (LITE && m.count >= 40) ? 2 : 1; this.n = Math.ceil(m.count / this.step);
+      const k = (LITE && m.w > 1000) ? .72 : 1;
+      canvas.width = Math.round(m.w * k); canvas.height = Math.round(m.h * k);
       canvas.style.aspectRatio = m.w + ' / ' + m.h;
       this.imgs = new Array(this.n); this.loaded = 0; this.started = false;
       this.cur = 0; this.target = 0; this.lastDrawn = -1;
       this.active = true; this.onready = null; this.ready = false;
       PKT.seqs[key] = this;
     }
-    url(i) { return this.dir + '/f_' + String(i).padStart(3, '0') + '.' + this.ext; }
+    url(i) { return this.dir + '/f_' + String(i * this.step).padStart(3, '0') + '.' + this.ext; }
     load(priority) {
       if (this.started) return this.promise; this.started = true;
       const self = this; const first = Math.min(this.n, priority || 12);
@@ -59,8 +61,9 @@
       const i0 = Math.floor(this.cur), f = this.cur - i0, i1 = Math.min(this.n - 1, i0 + 1);
       const a = this.nearest(i0), b = this.nearest(i1), c = this.ctx;
       c.globalAlpha = 1; c.clearRect(0, 0, this.cv.width, this.cv.height);
-      if (a) c.drawImage(a, 0, 0);
-      if (b && f > 0.03 && b !== a) { c.globalAlpha = f; c.drawImage(b, 0, 0); c.globalAlpha = 1; }
+      const cw = this.cv.width, ch = this.cv.height;
+      if (a) c.drawImage(a, 0, 0, cw, ch);
+      if (b && f > 0.03 && b !== a) { c.globalAlpha = f; c.drawImage(b, 0, 0, cw, ch); c.globalAlpha = 1; }
     }
   }
   PKT.Seq = Seq;

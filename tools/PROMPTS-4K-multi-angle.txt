@@ -1,0 +1,386 @@
+MULTI-ANGLE 4K PROMPTS - copy and paste
+=======================================
+None of these prompts describe the character (no gender, height, build, face or hair). Your uploaded AI character image supplies all of that.
+OUTFIT: every prompt has one sentence that starts 'In every view the character wears ...'. Delete that sentence to keep the character's own outfit, or change it to any outfit you like.
+
+HOW TO USE (about a minute to learn)
+ 1. Open a NEW Gemini chat and choose the best image model on your Pro plan (ask for 4K).
+ 2. Attach your AI character image (the best, clearest one; add a second angle if you have it).
+ 3. Paste STEP 0 below together with the image and send. Wait for the reply.
+ 4. For each scene paste ONE "SHEET PROMPT". Gemini returns ONE image showing the same character from 4 camera angles, like a 3D turntable.
+    Download the original full-size PNG (not a screenshot).
+ 5. Rename the file exactly as shown (for example hello_sheet.png) and send it to me in this chat, or put it in the inbox folder.
+    I cut each view out, line them up, upscale to 4K if the sheet is smaller, and wire them into the site.
+ 6. Keep all sheets in the SAME chat so the character and the camera distance stay consistent.
+
+If a sheet disappoints, use the ONE-BY-ONE prompts under the same scene: one image per angle (more pixels per pose).
+Any number of poses works, from one up. Scenes you skip keep their current look.
+
+FILE NAMES
+  hello_sheet.png  (optional second sheet: hello_sheetB.png)
+  anchor_sheet.png
+  office_sheet.png
+  desk_sheet.png   (optional second sheet: desk_sheetB.png)
+  home_sheet.png
+  storm_01.png storm_02.png storm_03.png      (backgrounds, no character)
+  cockpit_01.png cockpit_02.png cockpit_03.png (optional, the gaming section)
+  One-by-one versions are named hello_01.png, hello_02.png ... as shown.
+
+ANGLE WORDS USED
+  front = facing the camera straight on.   three-quarter left/right = turned about 35 degrees toward the viewer's left/right.
+  profile = turned 90 degrees (a side view).   over-the-shoulder = turned away, looking back at the camera.   low / high = camera below / above eye level.
+
+==============================================================================
+STEP 0 - paste ONCE at the start of the chat, with your character image attached
+==============================================================================
+
+>>> STEP 0
+---- COPY FROM THE NEXT LINE ----
+The attached image is my AI character. It is the single source of truth: in every image I ask for, reproduce this exact character, identical in every detail and in the same rendering style as the attached image. Never redesign, restyle, beautify or alter the character in any way. I will ask for multi-angle sheets: ONE image that contains several views of the same character, like a 3D turntable or model sheet. Always produce the highest resolution you can (4K) with crisp, clean edges and fine detail. Wait for my next message.
+---- STOP COPYING ----
+
+==============================================================================
+1. HELLO  (opening studio, warm beige)
+==============================================================================
+
+>>> SHEET PROMPT -> save as hello_sheet.png
+---- COPY FROM THE NEXT LINE ----
+Create ONE single image laid out as a clean 2 x 2 grid: four separate views of the same character, two on the top row and two on the bottom row, like a 3D model turntable sheet. Every view is an independent figure with generous empty space around it: at least 10% of the image width between neighbouring views, and nothing touching the image edges. No overlap between views, no grid lines, no frames, no labels, no numbers, no text, no arrows. All four views use the identical camera distance and framing, so the character is exactly the same size in every view, and the figures in one row sit on the same baseline. Each view is a waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred in its quarter of the image. The figure runs all the way down to the bottom of its quarter with a clean straight crop at the waist, and about 8% of empty space is left above the head. Both hands and elbows stay fully inside the view. The four views, in reading order (top-left, top-right, bottom-left, bottom-right):
+Top-left: Front view, facing the camera straight on. Palms pressed together at chest height in a namaste, a warm gentle smile, a slight bow of the head, eyes looking into the camera.
+Top-right: Three-quarter view, the character turned about 35 degrees toward the viewer's left. One hand raised in a relaxed wave, a big natural smile, the other arm loose.
+Bottom-left: Three-quarter view, the character turned about 35 degrees toward the viewer's right. Both hands open in front of the chest as if explaining something mid-sentence, eyebrows slightly raised, friendly expression.
+Bottom-right: Front view from a slightly low camera angle, looking up at the character. One hand held flat and tilted like an aeroplane in flight, a playful half-smile, looking into the camera. In every view the character wears a dark charcoal blazer over a plain white crew-neck T-shirt, no logos.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Square image, aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image in all four views, unchanged.
+---- STOP COPYING ----
+
+>>> SHEET PROMPT B (optional, more poses) -> save as hello_sheetB.png
+---- COPY FROM THE NEXT LINE ----
+Create ONE single image laid out as a clean 2 x 2 grid: four separate views of the same character, two on the top row and two on the bottom row, like a 3D model turntable sheet. Every view is an independent figure with generous empty space around it: at least 10% of the image width between neighbouring views, and nothing touching the image edges. No overlap between views, no grid lines, no frames, no labels, no numbers, no text, no arrows. All four views use the identical camera distance and framing, so the character is exactly the same size in every view, and the figures in one row sit on the same baseline. Each view is a waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred in its quarter of the image. The figure runs all the way down to the bottom of its quarter with a clean straight crop at the waist, and about 8% of empty space is left above the head. Both hands and elbows stay fully inside the view. The four views, in reading order (top-left, top-right, bottom-left, bottom-right):
+Top-left: Front view, facing the camera straight on. Index finger pointing toward the camera, a confident smile, leaning very slightly forward.
+Top-right: Side profile view, the character turned 90 degrees toward the viewer's right. Hands loosely together, a thoughtful smile, looking off into the distance.
+Bottom-left: Over-the-shoulder view, the character turned about 150 degrees away and looking back at the camera over the shoulder. A warm smile, one hand raised in a small wave.
+Bottom-right: Three-quarter view, the character turned about 35 degrees toward the viewer's left. Arms folded, relaxed and confident, a calm smile looking into the camera. In every view the character wears a dark charcoal blazer over a plain white crew-neck T-shirt, no logos.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Square image, aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image in all four views, unchanged.
+---- STOP COPYING ----
+
+   ONE-BY-ONE VERSION (only if you prefer single images):
+
+>>> hello_01.png
+---- COPY FROM THE NEXT LINE ----
+Front view, facing the camera straight on. Palms pressed together at chest height in a namaste, a warm gentle smile, a slight bow of the head, eyes looking into the camera. In every view the character wears a dark charcoal blazer over a plain white crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> hello_02.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's left. One hand raised in a relaxed wave, a big natural smile, the other arm loose. In every view the character wears a dark charcoal blazer over a plain white crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> hello_03.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's right. Both hands open in front of the chest as if explaining something mid-sentence, eyebrows slightly raised, friendly expression. In every view the character wears a dark charcoal blazer over a plain white crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> hello_04.png
+---- COPY FROM THE NEXT LINE ----
+Front view from a slightly low camera angle, looking up at the character. One hand held flat and tilted like an aeroplane in flight, a playful half-smile, looking into the camera. In every view the character wears a dark charcoal blazer over a plain white crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> hello_05.png
+---- COPY FROM THE NEXT LINE ----
+Front view, facing the camera straight on. Index finger pointing toward the camera, a confident smile, leaning very slightly forward. In every view the character wears a dark charcoal blazer over a plain white crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> hello_06.png
+---- COPY FROM THE NEXT LINE ----
+Side profile view, the character turned 90 degrees toward the viewer's right. Hands loosely together, a thoughtful smile, looking off into the distance. In every view the character wears a dark charcoal blazer over a plain white crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> hello_07.png
+---- COPY FROM THE NEXT LINE ----
+Over-the-shoulder view, the character turned about 150 degrees away and looking back at the camera over the shoulder. A warm smile, one hand raised in a small wave. In every view the character wears a dark charcoal blazer over a plain white crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> hello_08.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's left. Arms folded, relaxed and confident, a calm smile looking into the camera. In every view the character wears a dark charcoal blazer over a plain white crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+==============================================================================
+2. THE SKY OPENS  (bright blue sky)
+==============================================================================
+
+>>> SHEET PROMPT -> save as anchor_sheet.png
+---- COPY FROM THE NEXT LINE ----
+Create ONE single image laid out as a clean 2 x 2 grid: four separate views of the same character, two on the top row and two on the bottom row, like a 3D model turntable sheet. Every view is an independent figure with generous empty space around it: at least 10% of the image width between neighbouring views, and nothing touching the image edges. No overlap between views, no grid lines, no frames, no labels, no numbers, no text, no arrows. All four views use the identical camera distance and framing, so the character is exactly the same size in every view, and the figures in one row sit on the same baseline. Each view is a waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred in its quarter of the image. The figure runs all the way down to the bottom of its quarter with a clean straight crop at the waist, and about 8% of empty space is left above the head. Both hands and elbows stay fully inside the view. The four views, in reading order (top-left, top-right, bottom-left, bottom-right):
+Top-left: Three-quarter view, the character turned about 35 degrees toward the viewer's left. Gazing up and slightly to the side with a soft wondering smile, chin lifted, both arms relaxed.
+Top-right: Front view, facing the camera straight on. Both arms spread wide open as if opening up to the sky, a joyful open-mouthed smile.
+Bottom-left: Three-quarter view, the character turned about 35 degrees toward the viewer's right. One hand resting on the chest, a grateful warm smile, looking into the camera.
+Bottom-right: Front view from a slightly high camera angle, looking down at the character. Hands loosely clasped in front, a calm friendly expression, talking to the camera. In every view the character wears a dark charcoal blazer over a plain grey crew-neck T-shirt, no logos.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Square image, aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image in all four views, unchanged.
+---- STOP COPYING ----
+
+   ONE-BY-ONE VERSION (only if you prefer single images):
+
+>>> anchor_01.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's left. Gazing up and slightly to the side with a soft wondering smile, chin lifted, both arms relaxed. In every view the character wears a dark charcoal blazer over a plain grey crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> anchor_02.png
+---- COPY FROM THE NEXT LINE ----
+Front view, facing the camera straight on. Both arms spread wide open as if opening up to the sky, a joyful open-mouthed smile. In every view the character wears a dark charcoal blazer over a plain grey crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> anchor_03.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's right. One hand resting on the chest, a grateful warm smile, looking into the camera. In every view the character wears a dark charcoal blazer over a plain grey crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> anchor_04.png
+---- COPY FROM THE NEXT LINE ----
+Front view from a slightly high camera angle, looking down at the character. Hands loosely clasped in front, a calm friendly expression, talking to the camera. In every view the character wears a dark charcoal blazer over a plain grey crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+==============================================================================
+3. NINE-PLUS YEARS  (boarding-pass stops)
+==============================================================================
+
+>>> SHEET PROMPT -> save as office_sheet.png
+---- COPY FROM THE NEXT LINE ----
+Create ONE single image laid out as a clean 2 x 2 grid: four separate views of the same character, two on the top row and two on the bottom row, like a 3D model turntable sheet. Every view is an independent figure with generous empty space around it: at least 10% of the image width between neighbouring views, and nothing touching the image edges. No overlap between views, no grid lines, no frames, no labels, no numbers, no text, no arrows. All four views use the identical camera distance and framing, so the character is exactly the same size in every view, and the figures in one row sit on the same baseline. Each view is a waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred in its quarter of the image. The figure runs all the way down to the bottom of its quarter with a clean straight crop at the waist, and about 8% of empty space is left above the head. Both hands and elbows stay fully inside the view. The four views, in reading order (top-left, top-right, bottom-left, bottom-right):
+Top-left: Front view, facing the camera straight on. Holding a plain blank boarding-pass-sized card in one hand and glancing at the camera with a smile; no logos or text on the card.
+Top-right: Three-quarter view, the character turned about 35 degrees toward the viewer's right. A tablet held against the forearm like a work device, a confident slight smile, the blank screen facing away from the camera.
+Bottom-left: Front view, facing the camera straight on. Wearing a wired call-centre headset, mid-conversation, friendly and animated, one hand gesturing.
+Bottom-right: Three-quarter view, the character turned about 35 degrees toward the viewer's left. A proud smile and a clear thumbs up toward the camera. In every view the character wears a dark charcoal blazer over a plain grey crew-neck T-shirt, no logos.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Square image, aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image in all four views, unchanged.
+---- STOP COPYING ----
+
+   ONE-BY-ONE VERSION (only if you prefer single images):
+
+>>> office_01.png
+---- COPY FROM THE NEXT LINE ----
+Front view, facing the camera straight on. Holding a plain blank boarding-pass-sized card in one hand and glancing at the camera with a smile; no logos or text on the card. In every view the character wears a dark charcoal blazer over a plain grey crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> office_02.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's right. A tablet held against the forearm like a work device, a confident slight smile, the blank screen facing away from the camera. In every view the character wears a dark charcoal blazer over a plain grey crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> office_03.png
+---- COPY FROM THE NEXT LINE ----
+Front view, facing the camera straight on. Wearing a wired call-centre headset, mid-conversation, friendly and animated, one hand gesturing. In every view the character wears a dark charcoal blazer over a plain grey crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> office_04.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's left. A proud smile and a clear thumbs up toward the camera. In every view the character wears a dark charcoal blazer over a plain grey crew-neck T-shirt, no logos.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+==============================================================================
+4. THE BUILDER  (dark blueprint desk, seated, no chair visible)
+==============================================================================
+
+>>> SHEET PROMPT -> save as desk_sheet.png
+---- COPY FROM THE NEXT LINE ----
+Create ONE single image laid out as a clean 2 x 2 grid: four separate views of the same character, two on the top row and two on the bottom row, like a 3D model turntable sheet. Every view is an independent figure with generous empty space around it: at least 10% of the image width between neighbouring views, and nothing touching the image edges. No overlap between views, no grid lines, no frames, no labels, no numbers, no text, no arrows. All four views use the identical camera distance and framing, so the character is exactly the same size in every view, and the figures in one row sit on the same baseline. Each view is a waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred in its quarter of the image. The figure runs all the way down to the bottom of its quarter with a clean straight crop at the waist, and about 8% of empty space is left above the head. Both hands and elbows stay fully inside the view. The four views, in reading order (top-left, top-right, bottom-left, bottom-right):
+Top-left: Three-quarter view, the character turned about 35 degrees toward the viewer's left. Seated and leaning slightly forward, hands low in front as if typing on a laptop below the frame, eyes on a screen just below the camera.
+Top-right: Side profile view, the character turned 90 degrees toward the viewer's right. Chin resting on a fist, brows slightly furrowed, looking at a screen off to the side, deep in thought.
+Bottom-left: Front view, facing the camera straight on. One index finger raised, eyes wide, an excited sudden-idea smile.
+Bottom-right: Front view from a slightly high camera angle, looking down at the character. Holding a small blue microcontroller board between two fingers at chest height and inspecting it with curiosity; no brand text on the board. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Square image, aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image in all four views, unchanged.
+---- STOP COPYING ----
+
+>>> SHEET PROMPT B (optional, more poses) -> save as desk_sheetB.png
+---- COPY FROM THE NEXT LINE ----
+Create ONE single image laid out as a clean 2 x 2 grid: four separate views of the same character, two on the top row and two on the bottom row, like a 3D model turntable sheet. Every view is an independent figure with generous empty space around it: at least 10% of the image width between neighbouring views, and nothing touching the image edges. No overlap between views, no grid lines, no frames, no labels, no numbers, no text, no arrows. All four views use the identical camera distance and framing, so the character is exactly the same size in every view, and the figures in one row sit on the same baseline. Each view is a waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred in its quarter of the image. The figure runs all the way down to the bottom of its quarter with a clean straight crop at the waist, and about 8% of empty space is left above the head. Both hands and elbows stay fully inside the view. The four views, in reading order (top-left, top-right, bottom-left, bottom-right):
+Top-left: Front view, facing the camera straight on. Leaning back with both hands behind the head, a satisfied grin, relaxed shoulders.
+Top-right: Three-quarter view, the character turned about 35 degrees toward the viewer's right. Pointing at a screen off to the side with a pleased, focused look.
+Bottom-left: Front view from a slightly low camera angle, looking up at the character. Both hands open in front as if presenting a finished result, a proud smile.
+Bottom-right: Three-quarter view, the character turned about 35 degrees toward the viewer's left. A small celebratory fist pump, a big grin. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Square image, aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image in all four views, unchanged.
+---- STOP COPYING ----
+
+   ONE-BY-ONE VERSION (only if you prefer single images):
+
+>>> desk_01.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's left. Seated and leaning slightly forward, hands low in front as if typing on a laptop below the frame, eyes on a screen just below the camera. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> desk_02.png
+---- COPY FROM THE NEXT LINE ----
+Side profile view, the character turned 90 degrees toward the viewer's right. Chin resting on a fist, brows slightly furrowed, looking at a screen off to the side, deep in thought. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> desk_03.png
+---- COPY FROM THE NEXT LINE ----
+Front view, facing the camera straight on. One index finger raised, eyes wide, an excited sudden-idea smile. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> desk_04.png
+---- COPY FROM THE NEXT LINE ----
+Front view from a slightly high camera angle, looking down at the character. Holding a small blue microcontroller board between two fingers at chest height and inspecting it with curiosity; no brand text on the board. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> desk_05.png
+---- COPY FROM THE NEXT LINE ----
+Front view, facing the camera straight on. Leaning back with both hands behind the head, a satisfied grin, relaxed shoulders. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> desk_06.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's right. Pointing at a screen off to the side with a pleased, focused look. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> desk_07.png
+---- COPY FROM THE NEXT LINE ----
+Front view from a slightly low camera angle, looking up at the character. Both hands open in front as if presenting a finished result, a proud smile. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> desk_08.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's left. A small celebratory fist pump, a big grin. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+==============================================================================
+5. CONTACT  (warm brown finale)
+==============================================================================
+
+>>> SHEET PROMPT -> save as home_sheet.png
+---- COPY FROM THE NEXT LINE ----
+Create ONE single image laid out as a clean 2 x 2 grid: four separate views of the same character, two on the top row and two on the bottom row, like a 3D model turntable sheet. Every view is an independent figure with generous empty space around it: at least 10% of the image width between neighbouring views, and nothing touching the image edges. No overlap between views, no grid lines, no frames, no labels, no numbers, no text, no arrows. All four views use the identical camera distance and framing, so the character is exactly the same size in every view, and the figures in one row sit on the same baseline. Each view is a waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred in its quarter of the image. The figure runs all the way down to the bottom of its quarter with a clean straight crop at the waist, and about 8% of empty space is left above the head. Both hands and elbows stay fully inside the view. The four views, in reading order (top-left, top-right, bottom-left, bottom-right):
+Top-left: Front view, facing the camera straight on. Palms together at chest height in a soft namaste, a warm gentle smile, the head tilted very slightly.
+Top-right: Three-quarter view, the character turned about 35 degrees toward the viewer's right. One hand on the chest, a sincere gentle smile, looking into the camera.
+Bottom-left: Front view, facing the camera straight on. Both arms opening slightly outward at waist height in a welcoming gesture, a big warm smile.
+Bottom-right: Three-quarter view, the character turned about 35 degrees toward the viewer's left. A relaxed head tilt, a friendly smile, one hand raised in a small goodbye wave. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Square image, aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image in all four views, unchanged.
+---- STOP COPYING ----
+
+   ONE-BY-ONE VERSION (only if you prefer single images):
+
+>>> home_01.png
+---- COPY FROM THE NEXT LINE ----
+Front view, facing the camera straight on. Palms together at chest height in a soft namaste, a warm gentle smile, the head tilted very slightly. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> home_02.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's right. One hand on the chest, a sincere gentle smile, looking into the camera. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> home_03.png
+---- COPY FROM THE NEXT LINE ----
+Front view, facing the camera straight on. Both arms opening slightly outward at waist height in a welcoming gesture, a big warm smile. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+>>> home_04.png
+---- COPY FROM THE NEXT LINE ----
+Three-quarter view, the character turned about 35 degrees toward the viewer's left. A relaxed head tilt, a friendly smile, one hand raised in a small goodbye wave. In every view the character wears a plain white crew-neck T-shirt, no logos, no jacket.
+Waist-up framing, from the top of the head down to the waist, at eye level with a 50mm look, centred, with about 12% of empty space above the head. The figure fills about 85% of the image height and runs to the bottom edge with a clean straight crop at the waist. Both hands and elbows stay fully inside the frame. Keep exactly this camera distance in every image of this scene.
+Background: one perfectly flat, solid chroma-key green (#00B140) across the whole image, edge to edge. No gradient, no vignette, no floor, no cast shadow, no reflection. Soft, even, frontal studio light with neutral white balance, and no green light spilling onto the character. Sharp, clean edges and fine natural detail. Aspect ratio 1:1, 4K, maximum resolution. The same character as in my attached image, unchanged.
+---- STOP COPYING ----
+
+==============================================================================
+6. MEGHALAYA STORM  (full-screen backgrounds, no character)
+==============================================================================
+
+>>> storm_01.png - Clouds roll in
+---- COPY FROM THE NEXT LINE ----
+Huge dark storm clouds pouring over the green hills of Meghalaya, North-East India: low rolling cloud banks, steel-blue and slate-grey sky, a curtain of heavy rain over distant ridges, wet green slopes, a moody cinematic wide shot. No people, no text, no logos, no watermarks. Cinematic, natural colour, deep detail, sharp. Keep the main subject and the brightest area in the middle third of the frame so the image also works when cropped to a tall phone screen. Aspect ratio 16:9, 4K, maximum resolution.
+---- STOP COPYING ----
+
+>>> storm_02.png - Lightning
+---- COPY FROM THE NEXT LINE ----
+The same Meghalaya hill scene at the peak of the storm: a forked bolt of lightning splitting the clouds over the hills, rain streaking sideways, the valley lit blue-white for an instant. No people, no text, no logos, no watermarks. Cinematic, natural colour, deep detail, sharp. Keep the main subject and the brightest area in the middle third of the frame so the image also works when cropped to a tall phone screen. Aspect ratio 16:9, 4K, maximum resolution.
+---- STOP COPYING ----
+
+>>> storm_03.png - The storm eases
+---- COPY FROM THE NEXT LINE ----
+The storm easing over the wet green Khasi hills: clouds breaking open with a single shaft of golden light, mist rising from the valley, quiet and dramatic. No people, no text, no logos, no watermarks. Cinematic, natural colour, deep detail, sharp. Keep the main subject and the brightest area in the middle third of the frame so the image also works when cropped to a tall phone screen. Aspect ratio 16:9, 4K, maximum resolution.
+---- STOP COPYING ----
+
+==============================================================================
+7. GAMING SECTION  (optional - the site keeps its video until you send these)
+==============================================================================
+
+>>> cockpit_01.png - Front on
+---- COPY FROM THE NEXT LINE ----
+Front-on shot of the character seated in a home flight-simulator cockpit rig, wearing a gaming headset with a boom microphone, looking into the camera with a confident smile, hands near the controls. Behind and around the character: large monitors showing a bright runway view, an instrument panel, dark room, neon purple and cyan accent lighting. The full image is the finished scene, so draw the character and the cockpit together. Do not draw any readable text or numbers on screens or panels (the website adds its own HUD numbers). Keep the key action in the middle 70% of the frame. Aspect ratio 16:9, 4K, maximum resolution.
+---- STOP COPYING ----
+
+>>> cockpit_02.png - Hand on the throttle
+---- COPY FROM THE NEXT LINE ----
+Over-the-shoulder, rear three-quarter view of the character in the same flight-simulator cockpit, one hand resting on the throttle levers, the glowing instrument panel and a runway ahead visible through the screens, neon purple and cyan accent lighting, shallow depth of field. The full image is the finished scene, so draw the character and the cockpit together. Do not draw any readable text or numbers on screens or panels (the website adds its own HUD numbers). Keep the key action in the middle 70% of the frame. Aspect ratio 16:9, 4K, maximum resolution.
+---- STOP COPYING ----
+
+>>> cockpit_03.png - Gripping the joystick
+---- COPY FROM THE NEXT LINE ----
+Tight close-up of the character's hand gripping the flight joystick in the same cockpit, cinematic side lighting in neon purple and cyan, instrument glow reflected softly, shallow depth of field, the character partly visible and out of focus behind. The full image is the finished scene, so draw the character and the cockpit together. Do not draw any readable text or numbers on screens or panels (the website adds its own HUD numbers). Keep the key action in the middle 70% of the frame. Aspect ratio 16:9, 4K, maximum resolution.
+---- STOP COPYING ----
+
+==============================================================================
+IF SOMETHING GOES WRONG
+==============================================================================
+ - Views touch or merge:        add "much more empty green space between the four views, each view well separated".
+ - Text, labels or grid lines:   add "no text, no labels, no grid lines anywhere".
+ - The character drifts:         re-attach your character image and add "match the attached character exactly".
+ - Green background has a floor or shadow:  add "the green must be one flat colour edge to edge, no floor, no shadow".
+ - Green tint on the character:  add "remove all green spill from the character".
+ - Not 4K:                       send it anyway. I upscale with an AI upscaler (tools/upscale.py) before it goes on the site.
+ - Only 3 or 2 views came out:   send it anyway; use the ONE-BY-ONE prompts for the missing angles.
+

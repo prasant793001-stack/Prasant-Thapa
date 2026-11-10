@@ -8,6 +8,7 @@
    setProgress(p) · tick(dt) · load() · progress · visible
    ============================================================ */
 (function () {
+  const LITE = document.documentElement.classList.contains('lite');
   const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const eo = (t) => 1 - Math.pow(1 - t, 3);
@@ -41,11 +42,12 @@
   const STAR = 'polygon(50% 0,60% 28%,88% 12%,74% 40%,100% 50%,74% 60%,88% 88%,60% 72%,50% 100%,40% 72%,12% 88%,26% 60%,0 50%,26% 40%,12% 12%,40% 28%)';
   const SHAPES = [{ r: '50%' }, { c: STAR }, { r: '8%', rot: 45 }, { c: 'polygon(0 20%,100% 0,85% 100%,10% 85%)' }];
   const VARS = ['--a1', '--a2', '--a3', '--a4'];
-  const TW = .075;                         /* how much of the scene's scroll one transition takes */
+  const TW0 = .075;                        /* most of a scene's scroll one transition takes (fewer poses = longer cuts) */
 
   class Shots {
     constructor(key, el, cfg) {
       this.key = key; this.el = el; this.cfg = cfg; this.n = cfg.n; this.kind = cfg.kind;
+      this.TW = Math.min(TW0, .3 / Math.max(1, cfg.n));          /* 8 poses -> .0375 of the pin, same scroll distance as 4 poses at .075 */
       this.order = ORDER[key] || ['rise', 'iris', 'slice', 'stamp', 'slide'];
       this.poses = []; this.imgs = []; this.loaded = 0; this.started = false; this.ready = false;
       this.visible = false; this.target = 0; this.cur = 0; this.t = 0; this.idx = 0; this.lastSfx = 0;
@@ -88,8 +90,8 @@
       let top = 0;
       for (let i = 0; i < n; i++) {
         const el = this.poses[i], s0 = this.start(i), s1 = i + 1 < n ? this.start(i + 1) : 2;
-        const u = i === 0 ? 1 : clamp((p - s0) / TW, 0, 1);
-        const covered = i + 1 < n && p >= s1 + TW;
+        const u = i === 0 ? 1 : clamp((p - s0) / this.TW, 0, 1);
+        const covered = i + 1 < n && p >= s1 + this.TW;
         const hidden = (i && p < s0) || covered || el.dataset.missing;
         if (hidden) { if (el.style.display !== 'none') el.style.display = 'none'; continue; }
         if (el.style.display === 'none') el.style.display = '';
@@ -102,11 +104,11 @@
         el.style.opacity = L.o == null ? 1 : L.o.toFixed(3);
         el.style.clipPath = L.clip || 'none';
         el.style.transform = 'translate3d(' + x.toFixed(2) + '%,' + y.toFixed(2) + '%,0) rotate(' + r.toFixed(2) + 'deg) scale(' + sc.toFixed(4) + ')';
-        el.style.filter = (L.b || (L.br && L.br !== 1)) ? 'blur(' + (L.b || 0).toFixed(1) + 'px) brightness(' + (L.br || 1).toFixed(2) + ')' : 'none';
+        el.style.filter = (!LITE && (L.b || (L.br && L.br !== 1))) ? 'blur(' + (L.b || 0).toFixed(1) + 'px) brightness(' + (L.br || 1).toFixed(2) + ')' : 'none';
       }
       if (this.burst) {
         let bu = 0, bi = 0;
-        for (let i = 1; i < n; i++) { const q = (p - this.start(i)) / TW; if (q > 0 && q < 1) { bu = q; bi = i; break; } }
+        for (let i = 1; i < n; i++) { const q = (p - this.start(i)) / this.TW; if (q > 0 && q < 1) { bu = q; bi = i; break; } }
         const b = this.burst.style;
         if (bu <= 0) { if (b.opacity !== '0') b.opacity = 0; }
         else {

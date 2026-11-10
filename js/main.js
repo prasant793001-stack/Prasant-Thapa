@@ -14,6 +14,7 @@
   const rr = (a, b) => a + R() * (b - a);
   const pick = (arr) => arr[Math.floor(R() * arr.length)];
   gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
   try { history.scrollRestoration = 'manual'; } catch (e) { }
 
   PKT.pins = {};
@@ -81,10 +82,10 @@
   /* greedy non-overlapping packer: measures every bubble, keeps them off each other (and, on phones, off his face) */
   function packTools() {
     const W = tc.clientWidth || innerWidth, H = tc.clientHeight || innerHeight, small = W < 760;
-    const zones = small ? { a: [24, 95, 1, 5.5], b: [3, 60, 40, 73] } : { a: [4, 50, 7.5, 19], b: [2, 34, 44, 90] };
+    const zones = small ? { a: [22, 56, 1, 6.5], b: [3, 97, 38, 49] } : { a: [3, 43, 5, 27], b: [45, 97, 59, 73] };   /* desktop: above his head, and in the strip under the big words (never over him) */
     const placed = [], scale = small ? .78 : Math.min(1, Math.max(.78, W / 1440));
-    $$('.tool', tc).forEach((c) => {
-      const z = zones[c.dataset.z], f = +c.dataset.fs * scale;
+    $$('.tool', tc).forEach((c, idx) => {
+      const z = zones[small ? c.dataset.z : (idx % 2 ? 'b' : 'a')], f = +c.dataset.fs * scale;
       c.style.fontSize = f + 'em'; c.style.display = '';
       const w = c.offsetWidth, h = c.offsetHeight;
       let best = null;
@@ -198,7 +199,10 @@
   SEQ.hello.progress = (f) => { pFrames = f; show(); };
   const fontList = ['Caveat Brush', 'Covered By Your Grace', 'Gochi Hand', 'Amatic SC', 'Permanent Marker', 'Rock Salt', 'Sedgwick Ave Display', 'Bangers', 'Mansalva', 'Gaegu'];
   let fdone = 0;
-  const fontsP = Promise.all(fontList.map((f) => document.fonts.load('40px "' + f + '"').catch(() => { }).then(() => { fdone++; pFont = fdone / fontList.length; show(); })));
+  const LITE = document.documentElement.classList.contains('lite');
+  const critFonts = LITE ? fontList.slice(0, 3) : fontList;
+  if (LITE) setTimeout(() => fontList.slice(3).forEach((f) => document.fonts.load('40px "' + f + '"').catch(() => { })), 1500);
+  const fontsP = Promise.all(critFonts.map((f) => document.fonts.load('40px "' + f + '"').catch(() => { }).then(() => { fdone++; pFont = fdone / critFonts.length; show(); })));
   const timeout = new Promise((res) => setTimeout(res, 12000));
   Promise.race([Promise.all([fontsP, SEQ.hello.load(80)]), timeout]).then(() => {
     pFont = 1; pFrames = 1; show(); hand.textContent = 'Ready.'; $('#loaderBtns').hidden = false;
@@ -232,7 +236,7 @@
     layoutRoute();
 
     /* ---------- 01 HELLO (0 – 10.03 s) ---------- */
-    pinScene('hello', '.hello-pin', 420, 10.03, (tl) => {
+    pinScene('hello', '.hello-pin', 560, 10.03, (tl) => {
       tl.to('.hello-type', { yPercent: -16, scale: 1.14, duration: 10 }, 0);
       tl.to('.hello-type', { opacity: 0, duration: 2.6, ease: 'power1.in' }, 5.6);
       tl.to('#cv-hello', { scale: 1.07, duration: 10, transformOrigin: '50% 100%' }, 0);
@@ -279,7 +283,7 @@
     $$('.stamp').forEach((s, i) => gsap.from(s, { scale: 2.6, rotation: (i ? 14 : -18), opacity: 0, duration: .55, ease: 'power4.in', scrollTrigger: { trigger: s, start: 'top 82%', toggleActions: 'play none none reverse', onEnter: () => PKT.audio && PKT.audio.blip && PKT.audio.blip() } }));
 
     /* ---------- 04 BUILDER (29.6 – 39.6 s) ---------- */
-    pinScene('desk', '.desk-pin', 400, 10, (tl) => {
+    pinScene('desk', '.desk-pin', 540, 10, (tl) => {
       cap(tl, '#buildWord', .4, null, { dur: 2.4, y: 30 });
       const dw2 = $('.dw2'); tl.fromTo(dw2, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .8, ease: 'power2.out' }, 2.6);
       ['.n1', '.n2', '.n3'].forEach((s, i) => tl.fromTo(s, { opacity: 0, y: 90, rotation: i % 2 ? 12 : -12, scale: .7 }, { opacity: 1, y: 0, rotation: [-3, 2, -2][i], scale: 1, duration: .8, ease: 'back.out(1.6)' }, 3.4 + i * 1.5));

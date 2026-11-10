@@ -3,12 +3,20 @@
 <head>
 <meta charset="utf-8">
 <title>Prasant — a story told in weather</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover">
 <meta name="description" content="Prasant Kumar Thapa: content creator, video editor and AI-driven storyteller from Meghalaya, living in Al Ain, UAE. Scroll the story: rain, code, aeroplanes and seventeen cats.">
 <meta name="theme-color" content="#E8DDCC">
 <meta property="og:title" content="Prasant — a story told in weather">
 <meta property="og:description" content="Experience cannot be created. It can only be lived.">
-<link rel="preload" href="assets/seq/hello/f_000.webp" as="image">
+<script>
+/* phones and tablets get a lighter build of the same site: no full-screen blend layers, lighter 3D,
+   half the video frames, and heights that follow the real visible screen. ?lite=0 / ?lite=1 forces it off / on. */
+(function(){var d=document.documentElement,q=/[?&]lite=(\d)/.exec(location.search),lite=false;
+try{lite=q?q[1]==='1':(matchMedia('(pointer:coarse)').matches||Math.min(screen.width,screen.height)<600)}catch(e){}
+if(!lite)return;d.classList.add('lite');var w=0;
+function vh(){if(innerWidth!==w||!d.style.getPropertyValue('--vh')){w=innerWidth;d.style.setProperty('--vh',(innerHeight/100)+'px')}}
+vh();addEventListener('resize',vh);addEventListener('orientationchange',function(){w=0;setTimeout(vh,350)});})();
+</script>
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/chapters.css">
@@ -331,7 +339,6 @@
 <script src="js/shots.js"></script>
 <script src="js/fx.js"></script>
 <script src="js/audio.js"></script>
-<script src="js/showcase3d.js"></script>
 <script src="js/showcase-ui.js"></script>
 <script src="js/main.js"></script>
 </body>
